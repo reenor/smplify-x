@@ -147,9 +147,9 @@ unzip -n $PATH_TO_PROJECT/vposer/vposer_v1_0.zip -d $PATH_TO_PROJECT/vposer
 ```
 
 ## References
-https://github.com/vchoutas/smplify-x/issues/195
-https://github.com/vchoutas/smplify-x/issues/9
-https://github.com/vchoutas/smplify-x/issues/144
-https://github.com/vchoutas/smplify-x/issues/147
-https://github.com/pytorch/pytorch/issues/81883
+[issues 195](https://github.com/vchoutas/smplify-x/issues/195)
+[issues 9](https://github.com/vchoutas/smplify-x/issues/9)
+[issues 144](https://github.com/vchoutas/smplify-x/issues/144)
+[issues 147](https://github.com/vchoutas/smplify-x/issues/147)
+[issues 81883](https://github.com/pytorch/pytorch/issues/81883)
 
