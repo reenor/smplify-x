@@ -20,6 +20,7 @@ cd $PATH_TO_SMPLIFY_X
 ```
 
 ```Shell
+# vposer_v1_0
 python smplifyx/main.py --config cfg_files/fit_smplx.yaml \
     --data_folder  ../data \
     --output_folder ../data/smplifyx_results \
