@@ -24,12 +24,13 @@ where the `../data` should contain two subfolders, *images*, where the
 images are located, and *keypoints*, where the OpenPose output should be
 stored.
 
-## Dependencies
+## Set up 
 
-### 0. Set up virtual environment for Python using Anaconda, [reference](https://phoenixnap.com/kb/install-anaconda-ubuntu)
+### 0. Virtual environment for Python, [reference](https://phoenixnap.com/kb/install-anaconda-ubuntu)
 
+Update the latest available package versions
 ```Shell
-# Update the latest available package versions
+
 sudo apt update
 
 # Install the newest versions of all packages currently installed on the system
