@@ -7,6 +7,18 @@
 ## Fitting
 
 Run the following command to execute the code:
+
+```Shell
+# Initialize shell variables
+PATH_TO_VENV=~/venvs/smplify-x
+PATH_TO_SMPLIFY_X=~/Projects/smplify-x
+
+# Activate the virtual environment
+conda activate $PATH_TO_VENV
+
+cd $PATH_TO_SMPLIFY_X
+```
+
 ```Shell
 python smplifyx/main.py --config cfg_files/fit_smplx.yaml \
     --data_folder  ../data \
@@ -118,6 +130,7 @@ pip install -r requirements.txt
 
 ### 5. Pre-built models SMPL-X and VPoser
 
+* Create some folders
 ```Shell
 mkdir -p $PATH_TO_PROJECT/smplx/models_smplx_v1_1 $PATH_TO_PROJECT/vposer
 ```
@@ -126,10 +139,16 @@ mkdir -p $PATH_TO_PROJECT/smplx/models_smplx_v1_1 $PATH_TO_PROJECT/vposer
 
 * Download VPoser model (vposer_v1_0.zip, ~ 2.5MB) and copy it to folder $PATH_TO_PROJECT/vposer
 
+* Then extract the models
 ```Shell
 unzip -n $PATH_TO_PROJECT/smplx/models_smplx_v1_1/models_smplx_v1_1.zip -d $PATH_TO_PROJECT/smplx/models_smplx_v1_1
 unzip -n $PATH_TO_PROJECT/vposer/vposer_v1_0.zip -d $PATH_TO_PROJECT/vposer
 ```
-   
+
 ## References
+https://github.com/vchoutas/smplify-x/issues/195
+https://github.com/vchoutas/smplify-x/issues/9
+https://github.com/vchoutas/smplify-x/issues/144
+https://github.com/vchoutas/smplify-x/issues/147
+https://github.com/pytorch/pytorch/issues/81883
 
