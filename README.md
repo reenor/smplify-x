@@ -26,7 +26,7 @@ stored.
 
 ## Dependencies
 
-0. Set up virtual environment for Python using Anaconda [](https://phoenixnap.com/kb/install-anaconda-ubuntu)
+0. Set up virtual environment for Python using Anaconda [reference](https://phoenixnap.com/kb/install-anaconda-ubuntu)
 
 ```Shell
 # Update the latest available package versions
@@ -54,6 +54,20 @@ bash Anaconda3-2024.06-1-Linux-x86_64.sh
 # Once the installation is completed, close and reopen the shell to confirm the changes took effect
 # Update the system's PATH variable
 source ~/.bashrc
+```
+* Initialize shell variables
+```Shell
+PATH_TO_VENV=~/venvs/smplify-x
+PATH_TO_PROJECT=~/Projects
+PATH_TO_SMPLIFY_X=~/Projects/smplify-x
+```
+
+```Shell
+# Create the virtual environment
+conda create -p $PATH_TO_VENV python=3.7 # python 3.8 cannot be used to install pytorch 1.1.0
+
+# Activate the virtual environment
+conda activate $PATH_TO_VENV
 ```
 
 2. PyTorch
