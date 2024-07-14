@@ -26,26 +26,36 @@ stored.
 
 ## Dependencies
 
-0. Common
-Set up virtual environment for Python using Anaconda [](https://docs.anaconda.com/anaconda/install/linux/)
+0. Set up virtual environment for Python using Anaconda [](https://phoenixnap.com/kb/install-anaconda-ubuntu)
 
 ```Shell
+# Update the latest available package versions
+sudo apt update
+
+# Install the newest versions of all packages currently installed on the system
+sudo apt upgrade
+
+sudo apt install git --yes
 sudo apt install curl --yes
 ```
-# Download Anaconda
+
 ```Shell
+# Download Anaconda
 cd ~ && curl -O https://repo.anaconda.com/archive/Anaconda3-2024.06-1-Linux-x86_64.sh
 ```
+
+```Shell
 # Install Anaconda
-```Shell
 bash Anaconda3-2024.06-1-Linux-x86_64.sh
->>> yes 
+>>> yes >>> yes >>> yes
 ```
-# Once the installation is completed, close and reopen the shell to confirm the changes took effect.
-# Update the system's PATH variable.
+
 ```Shell
+# Once the installation is completed, close and reopen the shell to confirm the changes took effect
+# Update the system's PATH variable
 source ~/.bashrc
 ```
+
 2. PyTorch
 
 3. SMPL-X
