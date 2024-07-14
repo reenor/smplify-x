@@ -111,12 +111,24 @@ pip install git+https://github.com/reenor/human_body_prior@cvpr19#egg=human_body
 
 ```Shell
 mkdir -p $PATH_TO_PROJECT && cd $PATH_TO_PROJECT
-
 git clone https://github.com/reenor/smplify-x
-
 cd $PATH_TO_SMPLIFY_X
-
 pip install -r requirements.txt
+```
+
+### 5. Pre-built models SMPL-X and VPoser
+
+```Shell
+mkdir -p $PATH_TO_PROJECT/smplx/models_smplx_v1_1 $PATH_TO_PROJECT/vposer
+```
+
+* Download SMPL-X model (models_smplx_v1_1.zip, ~830MB) from [[Project Page](https://smpl-x.is.tue.mpg.de/)] and copy it to folder $PATH_TO_PROJECT/smplx/models_smplx_v1_1
+
+* Download VPoser model (vposer_v1_0.zip, ~ 2.5MB) and copy it to folder $PATH_TO_PROJECT/vposer
+
+```Shell
+unzip -n $PATH_TO_PROJECT/smplx/models_smplx_v1_1/models_smplx_v1_1.zip -d $PATH_TO_PROJECT/smplx/models_smplx_v1_1
+unzip -n $PATH_TO_PROJECT/vposer/vposer_v1_0.zip -d $PATH_TO_PROJECT/vposer
 ```
    
 ## References
