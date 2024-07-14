@@ -4,11 +4,8 @@
 [[Paper](https://ps.is.tuebingen.mpg.de/uploads_file/attachment/attachment/497/SMPL-X.pdf)]
 [[Supp. Mat.](https://ps.is.tuebingen.mpg.de/uploads_file/attachment/attachment/498/SMPL-X-supp.pdf)]
 
-## Description
+## Fitting
 
-This repository contains the fitting code used for the experiments in [Expressive Body Capture: 3D Hands, Face, and Body from a Single Image](https://smpl-x.is.tue.mpg.de/).
-
-### Fitting
 Run the following command to execute the code:
 ```Shell
 python smplifyx/main.py --config cfg_files/fit_smplx.yaml \
@@ -20,17 +17,13 @@ python smplifyx/main.py --config cfg_files/fit_smplx.yaml \
     --vposer_ckpt ../vposer/vposer_v1_0 \
     --part_segm_fn ../smplx_parts_segm.pkl
 ```
-where the `../data` should contain two subfolders, *images*, where the
-images are located, and *keypoints*, where the OpenPose output should be
-stored.
+where the `../data` should contain two subfolders, *images*, where the images are located, and *keypoints*, where the OpenPose output should be stored.
 
 ## Set up 
 
 ### 0. Virtual environment for Python, [reference](https://phoenixnap.com/kb/install-anaconda-ubuntu)
-
-Update the latest available package versions
 ```Shell
-
+# Update the latest available package versions
 sudo apt update
 
 # Install the newest versions of all packages currently installed on the system
@@ -53,6 +46,7 @@ bash Anaconda3-2024.06-1-Linux-x86_64.sh
 
 ```Shell
 # Once the installation is completed, close and reopen the shell to confirm the changes took effect
+
 # Update the system's PATH variable
 source ~/.bashrc
 ```
@@ -67,20 +61,28 @@ PATH_TO_SMPLIFY_X=~/Projects/smplify-x
 ```Shell
 # Create the virtual environment
 conda create -p $PATH_TO_VENV python=3.7 # python 3.8 cannot be used to install pytorch 1.1.0
-```
 
-```Shell
 # Activate the virtual environment
 conda activate $PATH_TO_VENV
 ```
 
-### 2. PyTorch
+** Just do it in case the virtual environment goes wrong!!!***
+```Shell
+# Deactivate the virtual environment
+conda deactivate
 
-### 3. SMPL-X
+# Delete the virtual environment
+conda remove -p $PATH_TO_VENV --all
+```
 
-### 4. VPoser
+### 1. PyTorch, [reference](https://stackoverflow.com/questions/60987997/why-torch-cuda-is-available-returns-false-even-after-installing-pytorch-with/61034368#61034368)
+#### Update the newest GPU driver using Software Updater
 
-### 5. SMPLify-X
+### 2. SMPL-X
+
+### 3. VPoser
+
+### 4. SMPLify-X
    
 ## References
 
