@@ -66,7 +66,7 @@ conda create -p $PATH_TO_VENV python=3.7 # python 3.8 cannot be used to install 
 conda activate $PATH_TO_VENV
 ```
 
-** Just do it in case the virtual environment goes wrong!!!***
+**Just do it in case the virtual environment goes wrong!!!**
 ```Shell
 # Deactivate the virtual environment
 conda deactivate
@@ -76,14 +76,48 @@ conda remove -p $PATH_TO_VENV --all
 ```
 
 ### 1. PyTorch, [reference](https://stackoverflow.com/questions/60987997/why-torch-cuda-is-available-returns-false-even-after-installing-pytorch-with/61034368#61034368)
+
 * Update the newest GPU driver using Software Updater
-* The GPU on my system is GeForce GT 730 -> Compute Capability is 3.5
+
+* The GPU on my system is GeForce GT 730 -> Compute Capability is 3.5. This is a long trial and error process to figure out which pytorch version is suitable for my GPU. Finally I went for pytorch **1.1.0** as the higher version don't support this GPU
+
+```Shell
+# CUDA 10.0
+conda install pytorch==1.1.0 torchvision==0.3.0 cudatoolkit=10.0 -c pytorch
+```
 
 ### 2. SMPL-X
 
+```Shell
+pip install smplx[all]
+cd ~ && git clone https://github.com/reenor/smplx
+cd ~/smplx && python setup.py install
+cd ~ && rm -rf smplx
+```
+
 ### 3. VPoser
 
+There are two models: vposer_v1_0 and vposer_v2_0. As vposer_v2_0 requires pytorch 1.7, I choose installing vposer_v1_0
+
+```Shell
+# Install dependencies
+pip install git+https://github.com/reenor/configer
+
+# Install vposer_v1_0
+pip install git+https://github.com/reenor/human_body_prior@cvpr19#egg=human_body_prior
+```
+
 ### 4. SMPLify-X
+
+```Shell
+mkdir -p $PATH_TO_PROJECT && cd $PATH_TO_PROJECT
+
+git clone https://github.com/reenor/smplify-x
+
+cd $PATH_TO_SMPLIFY_X
+
+pip install -r requirements.txt
+```
    
 ## References
 
