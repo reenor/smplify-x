@@ -76,7 +76,8 @@ conda remove -p $PATH_TO_VENV --all
 ```
 
 ### 1. PyTorch, [reference](https://stackoverflow.com/questions/60987997/why-torch-cuda-is-available-returns-false-even-after-installing-pytorch-with/61034368#61034368)
-#### Update the newest GPU driver using Software Updater
+* Update the newest GPU driver using Software Updater
+* The GPU on my system is GeForce GT 730 -> Compute Capability is 3.5
 
 ### 2. SMPL-X
 
