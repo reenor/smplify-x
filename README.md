@@ -67,7 +67,7 @@ source ~/.bashrc
 ```Shell
 # Initialize shell variables
 PATH_TO_VENV=~/venvs/smplify-x
-PATH_TO_PROJECT=~/Projects
+PATH_TO_PROJECT=~/Projects/repos-smplify-x
 PATH_TO_SMPLIFY_X=~/Projects/repos-smplify-x/smplify-x
 ```
 
