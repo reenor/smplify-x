@@ -11,7 +11,7 @@ Run the following command to execute the code:
 ```Shell
 # Initialize shell variables
 PATH_TO_VENV=~/venvs/smplify-x
-PATH_TO_SMPLIFY_X=~/Projects/smplify-x
+PATH_TO_SMPLIFY_X=~/Projects/repos-smplify-x/smplify-x
 
 # Activate the virtual environment
 conda activate $PATH_TO_VENV
@@ -68,7 +68,7 @@ source ~/.bashrc
 # Initialize shell variables
 PATH_TO_VENV=~/venvs/smplify-x
 PATH_TO_PROJECT=~/Projects
-PATH_TO_SMPLIFY_X=~/Projects/smplify-x
+PATH_TO_SMPLIFY_X=~/Projects/repos-smplify-x/smplify-x
 ```
 
 ```Shell
@@ -79,8 +79,9 @@ conda create -p $PATH_TO_VENV python=3.7 # python 3.8 cannot be used to install 
 conda activate $PATH_TO_VENV
 ```
 
-**Just do it in case the virtual environment goes wrong!!!**
 ```Shell
+## Just do it in case the virtual environment goes wrong!!!
+
 # Deactivate the virtual environment
 conda deactivate
 
